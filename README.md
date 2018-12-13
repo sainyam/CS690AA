@@ -1,4 +1,4 @@
-Primal-Dual Algorithm for generalized Steiner Tree problem:
+**Primal-Dual Algorithm for generalized Steiner Tree problem:**
 
 How to run: 
 Option1: To randomly generate input use "python steiner.py 1"
@@ -15,7 +15,7 @@ If the number of st pairs is equal to {n\choose 2}, the result is same as the mi
 
 I have also implemented a brute force algorithm that is exponential. It runs for small graphs and for larger graphs it takes a lot of time. 
 
-Uncapacitated Facility Location Problem:
+**Uncapacitated Facility Location Problem:**
 
 How to run:
 
