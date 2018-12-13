@@ -1,6 +1,7 @@
 **Primal-Dual Algorithm for generalized Steiner Tree problem:**
 
 How to run: 
+
 Option1: To randomly generate input use "python steiner.py 1"
 	To change the values of m,n and the number of st pairs, please change line 229 where we call generate_instance(n,m,st_number). I have given 4-5 different options that I tested it on.
 
