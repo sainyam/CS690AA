@@ -108,15 +108,17 @@ def get_cost(ed_lst,weights):
 
 #Brute force algorithm
 def steiner_brute_force(G,st_lst,weights):
-	H=nx.Graph()
-	for u in G.nodes():
-		H.add_node(u)
+	
 	ed_lst=G.edges()
 	i=0
 	mincost=10000000
 	while i<len(G.edges()):
 		lst=list(itertools.combinations(ed_lst,i))
+		
 		for sub_edges in lst:
+			H=nx.Graph()
+			for u in G.nodes():
+				H.add_node(u)
 			
 			for ed in sub_edges:
 				H.add_edge(ed[0],ed[1])
@@ -125,8 +127,8 @@ def steiner_brute_force(G,st_lst,weights):
 					mincost=get_cost(H.edges(),weights)
 					print "Brute force minimum till now",mincost
 				#print "connected",H.edges(),get_cost(H.edges(),weights)
-			edges = H.edges()
-  			H.remove_edges_from(edges)
+			#edges = H.edges()
+  			#H.remove_edges_from(edges)
 		i+=1
 	return mincost#list(itertools.combinations(ed_lst,1))[0]
 
